@@ -26,20 +26,20 @@ setInterval(function(){
     }
 },10);
 
-function jump(){
+function jump() {
     jumping = 1;
     let jumpcount = 0;
     let jumpInterval = setInterval(function(){
         let characterTop = 
         parseInt(window.getComputedStyle(character).getPropertyValue("top"));
-        if((characterTop>6)&&(counter<15)) {
+        if((characterTop>6)&&(jumpCount<15)) {
         character.style.top = (characterTop-5)+"px";
     }
     if(jumpCount>20) {
         clearInterval(jumpInterval);
         jumping=0;
         jumpCount=0;
-    }
+     }
         jumpCount++;
     },10);
 }
